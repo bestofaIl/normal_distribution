@@ -1,0 +1,103 @@
+h1 {
+    font-family: "Montserrat", serif;
+    color: black;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive;
+}
+
+.container {
+    background-color: darkgrey;
+}
+
+.left {
+    float: left;
+    margin: 1px 1px 0 0;
+}
+
+.right {
+    float: right;
+    margin: 1px 1px 0 0;
+}
+
+img {
+    max-width: 80px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+.block-element {
+    background-color: lightgreen;
+    border: 2px solid blue;
+    padding: 2px;
+    width: 5%;
+    text-align: center;
+}
+
+form {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 18px;
+    background-color: rosybrown;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+span.und {
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: crimson;
+}
+
+button:focus {
+    background-color: yellow;
+}
+
+.add-class {
+    font-size: 26px;
+}
+
+
+.Info {
+    position: relative;
+    cursor: pointer;
+    color: blue;
+}
+
+.Info:before {
+    display: block;
+    position: absolute;
+    content: attr(info-title);
+    width: 200px;
+    background-color: rgba(0,0,0,.85);
+    bottom: 30px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: .8em;
+    color:white;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.Info:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+

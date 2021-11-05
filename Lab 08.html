@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Lab 08 style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&famil.." rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css"
+          integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"
+            integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb"
+            crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js"
+            integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+            crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>Math.Society</title>
+</head>
+
+<body class="container">
+<form>
+    <img src="imgs/maths.png" class="left">
+    <h1>Math.Society</h1>
+</form>
+
+<div class="center">
+    <p>
+    <h2>Нормальное распределение</h2></p>
+</div>
+
+<p><b>Норма́льное распределе́ние</b><sup><small><a href="#1">[1]</a></small></sup><sup><small><a
+        href="#2">[2]</a></small></sup>, также называемое <b>распределением <a
+        href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81,_%D0%9A%D0%B0%D1%80%D0%BB_%D0%A4%D1%80%D0%B8%D0%B4%D1%80%D0%B8%D1%85"><span class="Info" info-title="Иога́нн Карл Фри́дрих Га́усс (нем. Johann Carl Friedrich Gauß; 30 апреля 1777, Брауншвейг — 23 февраля 1855, Гёттинген) — немецкий математик, механик, физик, астроном и геодезист. Считается одним из величайших математиков всех времён, «королём математиков»">Гаусса</span></a></b>
+    или <b>Гаусса — <a
+            href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%BF%D0%BB%D0%B0%D1%81,_%D0%9F%D1%8C%D0%B5%D1%80-%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD"><span class="Info" info-title="Пьер-Симо́н, маркиз де Лапла́с (фр. Pierre-Simon de Laplace; 23 марта 1749 — 5 марта 1827) — французский математик, механик, физик и астроном; известен работами в области небесной механики, дифференциальных уравнений, один из создателей теории вероятностей.">Лапласа</span></a></b><sup><small><a
+            href="#3">[3]</a></small></sup> —</p>
+<p>
+    <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9"><span class="Info" info-title="Распределение вероятностей — это закон, описывающий область значений случайной величины и соответствующие вероятности появления этих значений.">распределение вероятностей</span>
+        </a>, которое в одномерном случае задаётся функцией <a
+        href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B8"> <span class="Info" info-title="Пло́тность вероя́тности — один из способов задания распределения случайной величины.">плотности вероятности</span>
+    </a>,</p>
+<p>совпадающей с <a
+        href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%BE%D0%B2%D0%B0_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F"> <span class="Info" info-title="Гауссова функция (гауссиан, гауссиана, функция Гаусса) — вещественная функция
+
+ ">функцией Гаусса</span>
+    </a>:</p>
+
+<p class="left"> $$ f(x) = \frac 1 { \sigma \sqrt{2\pi} } e^{-\frac 1 2 { {\big (} \frac {x-\mu} \sigma \big ) }^{2}}
+    $$ </p>
+<br>
+<br>
+<br>
+<br>
+
+<p> $ {\displaystyle \mu } $ — <span class="Info" info-title="Математи́ческое ожида́ние — одно из важнейших понятий в теории вероятностей, означающее среднее (взвешенное по вероятностям возможных значений) значение случайной величины.">математическое ожидание</span> (среднее значение), медиана и мода распределения, а параметр </p>
+<p> $ {\displaystyle \sigma } $ — <span class="Info" info-title="В теории вероятностей и статистике среднеквадрати́ческое (среднеквадрати́чное) отклоне́ние — наиболее распространённый показатель рассеивания значений случайной величины относительно её математического ожидания (аналога среднего арифметического с бесконечным числом исходов).">среднеквадратическое отклонение</span>, </p>
+<p> $ {\displaystyle \sigma ^{2}} $ — <span class="Info" info-title="Диспе́рсия случа́йной величины́ — мера разброса значений случайной величины относительно её математического ожидания.">дисперсия распределения.</span> </p>
+
+<p> Обозначение $ {N(\mu ,\sigma ^{2})} $ </p>
+<p> Параметры </p>
+<p> $ {\displaystyle \mu} $ — коэффициент сдвига (вещественный) </p>
+<p> $ {\displaystyle \sigma} $ > 0 — коэффициент масштаба (вещественный, строго положительный) </p>
+<p> Носитель $ {\displaystyle x\in \left(-\infty ;+\infty \right)} $ </p>
+<p> Плотность вероятности $ {\displaystyle {\frac {1}{\sigma {\sqrt {2\pi }}}}\;\exp \left(-{\frac {\left(x-\mu
+    \right)^{2}}{2\sigma ^{2}}}\right)} $ </p>
+<p> Функция распределения $ {\frac {1}{2}}\left[1+\operatorname {erf} \left({\frac {x-\mu }{\sqrt {2\sigma
+    ^{2}}}}\right)\right] $ </p>
+<p> Математическое ожидание $ {\displaystyle \mu} $ </p>
+<p> Медиана $ {\displaystyle \mu} $ </p>
+<p> Мода $ {\displaystyle \mu} $ </p>
+<p> Дисперсия $ {\sigma ^{2}} $ </p>
+
+<p> Таким образом, одномерное нормальное распределение является двухпараметрическим семейством </p>
+<p> распределений, которое принадлежит экспоненциальному классу распределений<sup><small><a
+        href="#4">[4]</a></small></sup>. Многомерный случай </p>
+<p> описан в статье «<a
+        href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5"> <span class="Info" info-title="Многоме́рное норма́льное распределе́ние (или многоме́рное га́уссовское распределе́ние) в теории вероятностей — это обобщение одномерного нормального распределения. Случайный вектор, имеющий многомерное нормальное распределение, называется гауссовским вектором.">Многомерное нормальное распределение</span>
+    </a>». </p>
+
+<p><b>Стандартным нормальным распределением</b> называется нормальное распределение с математическим </p>
+<p> ожиданием $ {\displaystyle \mu =0}\ $ и стандартным отклонением $ {\displaystyle \sigma =1.} $ </p>
+
+<hr>
+
+<h3>Содержание</h3>
+<ol>
+    <li><a href="#ob">Общие сведения</a></li>
+    <li><a href="#no">Нормальное распределение в природе и приложениях</a></li>
+    <li><a href="#is">История</a></li>
+    <li><a href="#sm">См. также</a></li>
+    <li><a href="#pr">Примечания</a></li>
+    <li><a href="#li">Литература</a></li>
+    <li><a href="#ss">Ссылки</a></li>
+</ol>
+
+<hr>
+
+<h3 id="ob">Общие сведения</h3>
+<p> Если величина является суммой многих случайных слабо взаимозависимых величин, каждая из которых </p>
+<p> вносит малый вклад относительно общей суммы, то центрированное и нормированное распределение такой </p>
+<p> величины при достаточно большом числе слагаемых стремится к <i>нормальному распределению. </i></p>
+<p> Это следует из <a
+        href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0"> <span class="Info" info-title="Центра́льные преде́льные теоре́мы (ЦПТ) — класс теорем в теории вероятностей, утверждающих, что сумма достаточно большого количества слабо зависимых случайных величин, имеющих примерно одинаковые масштабы (ни одно из слагаемых не доминирует, не вносит в сумму определяющего вклада), имеет распределение, близкое к нормальному.">центральной предельной теоремы</span>
+    </a> <a
+        href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9"> <span class="Info" info-title="Тео́рия вероя́тностей — раздел математики, изучающий случайные события, случайные величины, их свойства и операции над ними.">теории вероятностей</span>
+    </a>. В окружающем нас мире часто </p>
+<p> встречаются величины, значение которых определяется совокупностью многих независимых факторов. </p>
+<p> Этот факт, а также то, что распределение считалось типичным, обычным, привели к тому, что в конце </p>
+<p> XIX века стал использоваться термин «нормальное распределение». Нормальное распределение играет </p>
+<p> заметную роль во многих областях науки, например в <a
+        href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0"> <span class="Info" info-title="Математи́ческая стати́стика — наука, разрабатывающая математические методы систематизации и использования статистических данных для научных и практических выводов.">математической статистике</span>
+    </a> и <a
+        href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0"> <span class="Info" info-title="Статисти́ческая фи́зика — это раздел теоретической физики, посвящённый изучению систем с произвольным (часто — бесконечным) числом степеней свободы.">статистической физике</span>
+    </a>. </p>
+<p> Случайная величина, имеющая нормальное распределение, называется нормальной, или гауссовской, </p>
+<p> случайной величиной. </p>
+
+<hr>
+
+<h3 id="no">Нормальное распределение в природе и приложениях</h3>
+<p> Нормальное распределение часто встречается в природе. Например, следующие случайные величины хорошо </p>
+<p> моделируются нормальным распределением: </p>
+<ul>
+    <li>отклонение при стрельбе;</li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D1%80%D0%B5%D1%88%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8F"> <span class="Info" info-title="Погре́шность измере́ния — отклонение измеренного значения величины от её истинного (действительного) значения.">погрешности измерений</span>
+            </a> (однако погрешности некоторых измерительных приборов имеют иное распределение);
+    </li>
+    <li>некоторые характеристики живых организмов в популяции.</li>
+</ul>
+<p> Такое широкое распространение этого распределения связано с тем, что оно является бесконечно делимым </p>
+<p> непрерывным распределением с конечной дисперсией. Поэтому к нему в пределе приближаются некоторые другие, </p>
+<p> например биномиальное и пуассоновское. Этим распределением моделируются многие недетерминированные </p>
+<p> физические процессы<sup><small><a href="#5">[5]</a></small></sup>. </p>
+<p> Многомерное нормальное распределение используется при исследовании многомерных случайных величин </p>
+<p> (случайных векторов). Одним из многочисленных примеров таких приложений является исследование параметров </p>
+<p> личности человека в психологии и психиатрии. </p>
+
+<hr>
+
+<h3 id="is">История</h3>
+<p> Впервые нормальное распределение как предел биномиального распределения при $ {\displaystyle p={\tfrac {1}{2}}}
+    $ </p>
+<p> появилось в 1738 году во втором издании работы <a
+        href="https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B0%D0%B2%D1%80,_%D0%90%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%BC_%D0%B4%D0%B5"><span class="Info" info-title="Абраха́м де Муа́вр (фр. и англ. Abraham de Moivre; 26 мая 1667, Витри-ле-Франсуа — 27 ноября 1754, Лондон) — английский математик французского происхождения.">Муавра</span></a>
+    «Доктрина случайностей»<sup><small><a href="https://en.wikipedia.org/wiki/The_Doctrine_of_Chances">[en]</a></small></sup><sup><small><a
+            href="#6">[6]</a></small></sup>. Это было первое </p>
+<p> доказательство частного случая <a
+        href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0"> <span class="Info" info-title="Центра́льные преде́льные теоре́мы (ЦПТ) — класс теорем в теории вероятностей, утверждающих, что сумма достаточно большого количества слабо зависимых случайных величин, имеющих примерно одинаковые масштабы (ни одно из слагаемых не доминирует, не вносит в сумму определяющего вклада), имеет распределение, близкое к нормальному.">центральной предельной теоремы</span>
+   </a>. В 1809 году Гаусс в сочинении «Теория движения </p>
+<p> небесных тел» ввёл это распределение как возникающее в результате многократных измерений движения небесных тел. </p>
+<p> Однако Гаусс вывел формулу для действительных случайных величин из принципа достижения максимума совместной </p>
+<p> плотности всех измерений в точке с координатами, равными среднему всех измерений. Этот принцип впоследствии </p>
+<p> подвергался критике. В 1812 году Лаплас в <a
+        href="https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%9C%D1%83%D0%B0%D0%B2%D1%80%D0%B0_%E2%80%94_%D0%9B%D0%B0%D0%BF%D0%BB%D0%B0%D1%81%D0%B0"> <span class="Info" info-title="Теорема Муавра — Лапласа — одна из предельных теорем теории вероятностей, установлена Лапласом в 1812 году. Если при каждом из {\displaystyle n}n независимых испытаний вероятность появления некоторого случайного события {\displaystyle E}E равна {\displaystyle p\in (0,1)}{\displaystyle p\in (0,1)}, и {\displaystyle m}m — число испытаний, в которых {\displaystyle E}E фактически наступает, то вероятность справедливости неравенства близка (при больших {\displaystyle n}n) к значению интеграла Лапласа.">теореме Муавра — Лапласа</span>
+    </a> обобщил результат Муавра для произвольного </p>
+<p> биномиального распределения, то есть для сумм одинаково распределённых независимых бинарных величин<sup><small><a
+        href="#3">[3]</a></small></sup>.</p>
+
+<hr>
+
+<h3 id="sm">См. также</h3>
+<ul>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D0%B4%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9_%D0%B3%D0%B0%D1%83%D1%81%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%88%D1%83%D0%BC">Аддитивный
+            белый гауссовский шум</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%B3%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">Логнормальное
+            распределение</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B2%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">Равномерное
+            распределение</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0">Центральная
+            предельная теорема</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D1%83%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">Двумерное
+            нормальное распределение</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">Многомерное
+            нормальное распределение</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%85%D0%B8-%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82">Распределение
+            хи-квадрат</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B8%D1%82%D0%B5%D1%80%D0%B8%D0%B9">Статистический
+            критерий</a></li>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B0%D1%81%D1%82%D0%BE%D1%82%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">Частотное
+            распределение</a></li>
+</ul>
+
+<hr>
+
+<h3 id="pr">Примечания</h3>
+<ol>
+    <li id="1"> ↑
+        Вентцель Е. С. Теория вероятностей. — 10-е изд., стереотипное.. — М.: <a
+                href="https://ru.wikipedia.org/wiki/Academia">Academia</a>, 2005. — 576 с. — <a
+                href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BD%D0%B8%D0%B3/5769523115">ISBN
+            5-7695-2311-5</a>.
+    <li id="2"> ↑
+        <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D1%80%D1%8F%D0%B5%D0%B2,_%D0%90%D0%BB%D1%8C%D0%B1%D0%B5%D1%80%D1%82_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87">Ширяев
+            А. Н.</a> Вероятность. — М.: Наука, 1980.
+    <li id="3"> ↑
+        <a href="https://archive.org/details/libgen_00008537">Математический энциклопедический словарь</a>. — М.: <a
+                href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_(%D0%B8%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE)">Советская
+            энциклопедия</a>, 1988. — С. 139—140.
+    <li id="4"> ↑
+        Wasserman L. <a href="https://archive.org/details/allstatisticscon00wass_368">All of Statistics</a>. — New York,
+        NY: Springer, 2004. — С. <a href="https://archive.org/details/allstatisticscon00wass_368/page/n158">142</a>. —
+        433 с. — <a
+                href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BD%D0%B8%D0%B3/9781441923226">ISBN
+            978-1-4419-2322-6</a>.
+    <li id="5"> ↑
+        Талеб Н. Н. Чёрный лебедь. Под знаком непредсказуемости = The Black Swan: The Impact of the Highly Improbable. —
+        КоЛибри, 2012. — 525 с. — <a
+                href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BD%D0%B8%D0%B3/9785389005730">ISBN
+            978-5-389-00573-0</a>.
+    <li id="6"> ↑
+        The doctrine of chances; or, a method of calculating the probability of events in play, L., 1718, 1738, 1756;
+        L., 1967 (репродуцир. изд.); Miscellanea analytica de scriebus et quadraturis, L., 1730.
+</ol>
+
+<hr>
+
+<h3 id="li">Литература</h3>
+<ul>
+    <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8E%D0%BA,_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%A1%D0%B5%D0%BC%D1%91%D0%BD%D0%BE%D0%B2%D0%B8%D1%87">Королюк
+            В. С.</a>, <a
+            href="https://ru.wikipedia.org/w/index.php?title=%D0%9F%D0%BE%D1%80%D1%82%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87&action=edit&redlink=1">Портенко
+        Н. И.</a>, <a
+            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B4,_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87">Скороход
+        А. В.</a>, <a
+            href="https://ru.wikipedia.org/w/index.php?title=%D0%A2%D1%83%D1%80%D0%B1%D0%B8%D0%BD,_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87&action=edit&redlink=1">Турбин
+        А. Ф.</a> Справочник по теории вероятностей и математической статистике. — М.: Наука, 1985. — 640 с.
+    </li>
+    <li>Halperin, Max; Hartley, Herman O.; Hoel, Paul G. Recommended Standards for Statistical Symbols and Notation.
+        COPSS Committee on Symbols and Notation (англ.) // <a
+                href="https://en.wikipedia.org/wiki/The_American_Statistician">The American Statistician</a>
+        (англ.)русск. : journal. — 1965. — Vol. 19, no. 3. — P. 12—14. — doi:<a
+                href="https://dx.doi.org/10.2307%2F2681417">10.2307/2681417</a>. — <a
+                href="https://ru.wikipedia.org/wiki/JSTOR">JSTOR</a> <a href="https://www.jstor.org/stable/2681417">2681417</a>.
+    </li>
+    <li>McPherson, Glen. Statistics in Scientific Investigation: Its Basis, Application and Interpretation (англ.). — <a
+            href="https://ru.wikipedia.org/wiki/Springer_Science%2BBusiness_Media">Springer-Verlag</a>, 1990. — <a
+            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BD%D0%B8%D0%B3/9780387971377">ISBN
+        978-0-387-97137-7</a>.
+    </li>
+    <li>Bryc, Wlodzimierz. The Normal Distribution: Characterizations with Applications (англ.). — <a
+            href="https://ru.wikipedia.org/wiki/Springer_Science%2BBusiness_Media">Springer-Verlag</a>, 1995. — <a
+            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BD%D0%B8%D0%B3/9780387979908">ISBN
+        978-0-387-97990-8</a>.
+    </li>
+</ul>
+
+<hr>
+
+<h3 id="ss">Ссылки</h3>
+<ul>
+    <li><a href="http://risktheory.novosyolov.com/distr_tab_normal.htm">Таблица значений функции стандартного
+        нормального распределения</a></li>
+    <li><a href="http://k-tree.ru/tools/statistics/normal.php">Онлайн расчёт вероятности нормального распределения</a>
+    </li>
+</ul>
+
+</body>
+</html>
